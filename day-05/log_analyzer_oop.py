@@ -25,14 +25,11 @@ class LogAnalyzer:
         
     # Loop through each log entry and update the count based on log level
         for line in lines:
-            if "INFO" in line:
-                #log_count.update({"INFO" : log_count["INFO"]+1})  
+            if "INFO" in line:  
                 self.log_count["INFO"] += 1 
             elif "WARNING" in line:
-                #log_count.update({"WARNING" : log_count["WARNING"]+1})
                 self.log_count["WARNING"] += 1
             elif "ERROR" in line:
-                #log_count.update({"ERROR" : log_count["ERROR"]+1})
                 self.log_count["ERROR"] += 1
             else:
                 pass
